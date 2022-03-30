@@ -1,11 +1,15 @@
 // Main Page
 import React from 'react';
+import NavBar from '../../components/NavBar/NavBar';
 
 import './Main.scss'
 
 const Main = () => {
   return (
-    <div>Main</div>
+    <>
+      <NavBar />
+      <div>Main</div>
+    </>
   )
 }
 
