@@ -28,6 +28,9 @@ const Box = () => {
 
           <div className="editable">
             <Editor value={speaker1Paragraph} />
+
+            <button className='btn-1'>Lot of Calls in the beg...</button>
+
           </div>
         </div>
 
@@ -42,6 +45,8 @@ const Box = () => {
 
           <div className="editable">
             <Editor value={speaker2Paragraph} />
+
+            <button className='btn-2'>Frequency of use ins...</button>
           </div>
         </div>
 
@@ -56,15 +61,11 @@ const Box = () => {
 
           <div className="editable">
             <Editor value={speaker3Paragraph} />
+
+            <button className='btn-3'>Lot of Calls in the beg...</button>
           </div>
         </div>
       </section>
-
-      <div className="btns">
-        <button className='btn-1'>Lot of Calls in the beg...</button>
-        <button className='btn-2'>Frequency of use ins...</button>
-        <button className='btn-3'>Lot of Calls in the beg...</button>
-      </div>
     </div>
   )
 }
