@@ -1,11 +1,35 @@
-import React from 'react'
+import React from 'react';
+import { useState } from 'react';
 
-import './Editor.scss'
+// Import the Slate editor factory.
+import { createEditor } from 'slate';
 
-const Editor = () => {
+// Import the Slate components and React plugin.
+import { Slate, Editable, withReact } from 'slate-react';
+
+import './Editor.scss';
+
+const Editor = ({ value }) => {
+  const [editor] = useState(() => withReact(createEditor()))
+  // initial value to be shown on page
+  const [paragraph, setParagraph] = useState([
+    {
+      type: 'paragraph',
+      children: [{
+        text: value
+      }],
+    },
+  ])
+
   return (
-    <div>
-
+    <div className='editor'>
+      <Slate
+        editor={editor}
+        value={paragraph}
+        onChange={newValue => setParagraph(newValue)} // setting new value using useState
+      >
+        <Editable />
+      </Slate>
     </div>
   )
 }
