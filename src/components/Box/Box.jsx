@@ -6,6 +6,7 @@ import Editor from '../Editor/Editor';
 import './Box.scss'
 
 const Box = () => {
+  // Box editable default paragraph that's going to exported as props to editor component
   const speaker1Paragraph = `There are many variations of Lorem Ipsum but the majority have suffered alteration There are many variationpassa don't look even slightly believable. If you are going to use a passage.`;
 
   const speaker2Paragraph = `There are many variations of Lorem Ipsum but the majority have suffered alteration There are many variationpassa don't look even slightly believable. If you are going to use a passage.`;
@@ -17,7 +18,7 @@ const Box = () => {
       <section className="box">
         <h3>Box 1</h3>
 
-        <div className='speaker'>
+        <div className='speaker'> {/* Speaker 1 */}
           <div className="speaker-info">
             <img src={images.speaker1} alt="Speaker 1" />
 
@@ -34,7 +35,7 @@ const Box = () => {
           </div>
         </div>
 
-        <div className='speaker'>
+        <div className='speaker'> {/* Speaker 2 */}
           <div className="speaker-info">
             <img src={images.speaker2} alt="Speaker 2" />
 
@@ -50,7 +51,7 @@ const Box = () => {
           </div>
         </div>
 
-        <div className='speaker'>
+        <div className='speaker'> {/* Speaker 3 */}
           <div className="speaker-info">
             <img src={images.speaker3} alt="Speaker 3" />
 
